@@ -5,4 +5,3 @@
 
 ---
 
-![webpage](https://imgur.com/a/IVNSRLE)
