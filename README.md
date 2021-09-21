@@ -3,11 +3,8 @@
 ---
 
 - https://luizgfelipe.github.io/clone-starbucks/
-
 - https://luizgfelipe.github.io/projeto-awax
--
 - https://luizgfelipe.github.io/projeto-landing-page/public/
--
 - https://luizgfelipe.github.io/jogo-estoura-bolas/
 
 ---
