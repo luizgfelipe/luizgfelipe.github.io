@@ -1,12 +1,14 @@
 
 var bolaQtd = 0;
 var pontosQtd = 0;
+var startStop;
 var verPausa = false;
 var iniciaJogo = true;
-
+var verFim = false;
+var nivel = 0;
 
 function placar(){
-    document.querySelector(".information__balls").innerHTML = "Bolas: " + bolaQtd;
+    document.querySelector(".information__balls").innerHTML = "Bolas na tela: " + bolaQtd;
     document.querySelector(".information__points").innerHTML = "Pontos: " + pontosQtd;
 }
 
@@ -29,31 +31,51 @@ function addBola(){
 
     //Aumentando a quantidade de bolas no placar
     bolaQtd = bolaQtd + 1;
-    document.querySelector(".information__balls").innerHTML = "Bolas: "+bolaQtd;
+    document.querySelector(".information__balls").innerHTML = "Bolas na tela: "+bolaQtd;
+
+    if(bolaQtd > 10){
+        fimDeJogo()
+    } else if(pontosQtd == 20){
+        fimDeJogo();
+    }
 }
 
 function estourar(elemento){
     if(verPausa == true){
         return
+    } else if(verFim == true){
+        return
     } else{
-        //Seleciona o display e remove o elemento filho
+        //Seleciona o display (tela) e remove o elemento filho (bolas)
         document.querySelector('.display').removeChild(elemento);
         
         bolaQtd = bolaQtd - 1;
-        document.querySelector(".information__balls").innerHTML = "Bolas: "+bolaQtd;
+        document.querySelector(".information__balls").innerHTML = "Bolas na tela: "+bolaQtd;
     
         pontosQtd = pontosQtd + 1
         document.querySelector(".information__points").innerHTML = "Pontos: "+pontosQtd;
     }
-
 }
 
-var startStop;
+function nivelJogo(elemento){
+    nivel = elemento.value;
+}
 
 function iniciarJogo(){
 
-    if( iniciaJogo == true){
-        startStop = setInterval(addBola, 800);
+    if(verFim == true){
+        verFim = false;
+        limpar();
+    }
+
+    if( iniciaJogo == true && nivel == 1){
+        startStop = setInterval(addBola, 1000);
+    } else if(iniciaJogo == true && nivel == 2){
+        startStop = setInterval(addBola, 700);
+    } else if(iniciaJogo == true && nivel == 3){
+        startStop = setInterval(addBola, 450);
+    } else {
+        return
     }
 
     iniciaJogo = false;
@@ -61,9 +83,24 @@ function iniciarJogo(){
     
     //Remove o fundo de pause no jogo
     document.querySelector(".display").classList.remove('pause');
+
+    //Remove o fundo de game over
+    document.querySelector(".display").classList.remove("loser");
+
+    //Habilitando o botão pausa
+    document.querySelector(".controls__button--red").removeAttribute('disabled', 'disabled');
+
+    //Desabilitando os níveis
+    document.querySelector(".controls__difficulty").classList.add("none");
 }
 
 function pararJogo(){
+
+    //Verifica se o jogo foi iniciado pelo menos
+    if(bolaQtd == 0){
+        return
+    }
+
     clearInterval(startStop);
     iniciaJogo = true;
     verPausa = true;
@@ -76,6 +113,7 @@ function limpar(){
     pararJogo();
     iniciaJogo = true;
     verPausa = false;
+    verFim = false;
     //Seleciona todos os elementos 'bolinha' e estoura cada um deles
     document.querySelectorAll('.bolinha').forEach(estourar);
 
@@ -90,5 +128,28 @@ function limpar(){
     //Remove o fundo de pause no jogo
     document.querySelector(".display").classList.remove('pause');
 
+    //Remove o fundo de game over
+    document.querySelector(".display").classList.remove("loser");
+
+    //Habilitando o botão pausa
+    document.querySelector(".controls__button--red").removeAttribute('disabled', 'disabled');
+
+    //Habilitando os níveis
+    document.querySelector(".controls__difficulty").classList.remove("none");
+
     placar();
+}
+
+function fimDeJogo(){
+
+    pararJogo();
+
+    //Adiciona o fundo de game over
+    document.querySelector(".display").classList.add("loser");
+    
+    //Desabilita o botão pausa
+    document.querySelector(".controls__button--red").setAttribute('disabled', 'disabled');
+
+    //Confirma que o jogo acabou
+    verFim = true;
 }

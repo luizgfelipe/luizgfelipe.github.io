@@ -17,10 +17,22 @@
     </section>
 
     <section class="game-body">
-        <div class="display">
-        </div>
+        <div class="display"></div>
         </div>
         <div class="controls">
+            <div class="controls__difficulty">
+                
+                <input type="radio" name="difficulty" id="1" value="1" onclick="nivelJogo(this)">
+                <label class="controls__difficulty__name" for="1">Fácil</label>
+                <br>
+                
+                <input type="radio" name="difficulty" id="2" value="2" onclick="nivelJogo(this)">
+                <label class="controls__difficulty__name" for="2">Médio</label>
+                <br>
+                
+                <input type="radio" name="difficulty" id="3" value="3" onclick="nivelJogo(this)">
+                <label class="controls__difficulty__name" for="3">Difícil</label>
+            </div>
             <button class="controls__button controls__button--green" onclick="iniciarJogo()">Iniciar</button>
             <button class="controls__button controls__button--red" onclick="pararJogo()">Parar</button>
             <button class="controls__button controls__button--blue" onclick="limpar()">Limpar</button>
