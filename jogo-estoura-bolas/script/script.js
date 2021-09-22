@@ -5,7 +5,7 @@ var startStop;
 var verPausa = false;
 var iniciaJogo = true;
 var verFim = false;
-var nivel = 0;
+var nivel = 1;
 
 function placar(){
     document.querySelector(".information__balls").innerHTML = "Bolas na tela: " + bolaQtd;
@@ -33,9 +33,9 @@ function addBola(){
     bolaQtd = bolaQtd + 1;
     document.querySelector(".information__balls").innerHTML = "Bolas na tela: "+bolaQtd;
 
-    if(bolaQtd > 10){
+    if(bolaQtd > 2){
         fimDeJogo()
-    } else if(pontosQtd == 20){
+    } else if(pontosQtd == 5){
         fimDeJogo();
     }
 }
@@ -131,6 +131,9 @@ function limpar(){
     //Remove o fundo de game over
     document.querySelector(".display").classList.remove("loser");
 
+    //Remove o fundo winner
+    document.querySelector(".display").classList.remove("winner");
+
     //Habilitando o botão pausa
     document.querySelector(".controls__button--red").removeAttribute('disabled', 'disabled');
 
@@ -144,8 +147,14 @@ function fimDeJogo(){
 
     pararJogo();
 
-    //Adiciona o fundo de game over
-    document.querySelector(".display").classList.add("loser");
+    if(bolaQtd > 2){
+        //Adiciona o fundo de game over
+        document.querySelector(".display").classList.add("loser");
+    } else if(pontosQtd == 5){
+        //Adiciona o fundo de winner
+        document.querySelector(".display").classList.add("winner");
+    }
+    
     
     //Desabilita o botão pausa
     document.querySelector(".controls__button--red").setAttribute('disabled', 'disabled');
