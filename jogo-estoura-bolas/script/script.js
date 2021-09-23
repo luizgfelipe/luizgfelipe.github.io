@@ -20,7 +20,7 @@ function addBola(){
     
     //Definindo uma posição X e Y
     var positionX = Math.floor(Math.random() * 750);
-    var positionY = Math.floor(Math.random() * 650);
+    var positionY = Math.floor(Math.random() * 450);
     
     //Posicionando a div bola em algum lugar aleatorio e adicionando a função de estourar ao clicar nela
     bola.setAttribute("style", "left:"+positionX+"px; top:"+positionY+"px");
@@ -33,9 +33,9 @@ function addBola(){
     bolaQtd = bolaQtd + 1;
     document.querySelector(".information__balls").innerHTML = "Bolas na tela: "+bolaQtd;
 
-    if(bolaQtd > 2){
+    if(bolaQtd >= 10){
         fimDeJogo()
-    } else if(pontosQtd == 5){
+    } else if(pontosQtd == 20){
         fimDeJogo();
     }
 }

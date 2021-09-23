@@ -40,7 +40,7 @@ body{
 .information{
     background-color: rgb(22, 54, 54);
     width: 800px;
-    height: 50px;
+    height: 40px;
     display: flex;
     color: white;
     font-weight: bold;
@@ -72,7 +72,7 @@ body{
 
 .display{
     width: 800px;
-    height: 700px;
+    height: 500px;
     background-color: rgb(20, 20, 20);
     position: relative;
     display: flex;
@@ -81,7 +81,7 @@ body{
 }
 .pause{
     width: 800px;
-    height: 700px;
+    height: 500px;
     background-image: url(images/pause.png);
     background-position: center;
     background-size: auto;
@@ -91,7 +91,7 @@ body{
 
 .loser{
     width: 800px;
-    height: 700px;
+    height: 500px;
     background-image: url(images/game-over.png);
     background-position: center;
     background-size: auto;
@@ -101,7 +101,7 @@ body{
 
 .winner{
     width: 800px;
-    height: 700px;
+    height: 500px;
     background-image: url(images/winner.png);
     background-position: center;
     background-size: auto;
