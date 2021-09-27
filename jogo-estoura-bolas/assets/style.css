@@ -16,13 +16,13 @@
 }
 
 body{
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(56, 56, 56);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 1200px;
+    width: 100vw;
 }
 
 .title{
@@ -34,11 +34,33 @@ body{
     width: 800px;
     height: 50px;
     background-color: black;
-    font-size: 20px;
+    font-size: 16px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.geral{
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions{
+    width: 800px;
+    height: 150px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid white;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.instructions ol li{
+    margin: 10px 0px;
 }
 
 .information{
-    background-color: rgb(22, 54, 54);
+    background-color: rgb(185, 44, 44);
     width: 800px;
     height: 40px;
     display: flex;
@@ -63,11 +85,11 @@ body{
 
 .game-body{
     width: 800px;
-    height: 800px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 
 .display{

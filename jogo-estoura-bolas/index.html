@@ -8,35 +8,51 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body onload="placar()">
+    
     <header class="title">
         <h1>Estoura Bolas</h1>
     </header>
-    <section class="information">
-        <div class="information__balls">Bolas:</div>
-        <div class="information__points">Pontos:</div>
-    </section>
 
-    <section class="game-body">
-        <div class="display"></div>
-        </div>
-        <div class="controls">
-            <div class="controls__difficulty">
-                
-                <input type="radio" name="difficulty" id="1" value="1" onclick="nivelJogo(this)" checked>
-                <label class="controls__difficulty__name" for="1">Fácil</label>
-                <br>
-                
-                <input type="radio" name="difficulty" id="2" value="2" onclick="nivelJogo(this)">
-                <label class="controls__difficulty__name" for="2">Médio</label>
-                <br>
-                
-                <input type="radio" name="difficulty" id="3" value="3" onclick="nivelJogo(this)">
-                <label class="controls__difficulty__name" for="3">Difícil</label>
-            </div>
-            <button class="controls__button controls__button--green" onclick="iniciarJogo()">Iniciar</button>
-            <button class="controls__button controls__button--red" onclick="pararJogo()">Parar</button>
-            <button class="controls__button controls__button--blue" onclick="limpar()">Limpar</button>
-        </div>
+    <section class="geral">
+        <section>
+            <section class="information">
+                <div class="information__balls">Bolas:</div>
+                <div class="information__points">Pontos:</div>
+            </section>
+
+            <section class="game-body">
+                <div class="display"></div>
+                </div>
+                <div class="controls">
+                    <div class="controls__difficulty">
+                        
+                        <input type="radio" name="difficulty" id="1" value="1" onclick="nivelJogo(this)" checked>
+                        <label class="controls__difficulty__name" for="1">Fácil</label>
+                        <br>
+                        
+                        <input type="radio" name="difficulty" id="2" value="2" onclick="nivelJogo(this)">
+                        <label class="controls__difficulty__name" for="2">Médio</label>
+                        <br>
+                        
+                        <input type="radio" name="difficulty" id="3" value="3" onclick="nivelJogo(this)">
+                        <label class="controls__difficulty__name" for="3">Difícil</label>
+                    </div>
+                    <button class="controls__button controls__button--green" onclick="iniciarJogo()">Iniciar</button>
+                    <button class="controls__button controls__button--red" onclick="pararJogo()">Parar</button>
+                    <button class="controls__button controls__button--blue" onclick="limpar()">Limpar</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="instructions">
+            <ol>
+                <li>Escolha um nível de dificuldade</li>
+                <li>Estoure 20 bolinhas para ganhar!</li>
+                <li>Acumulando 10 bolinhas na tela você perde!</li>
+            </ol>
+            <h3>Boa sorte!</h3>
+        </section>
+
     </section>
 
     <script src="script/script.js"></script>

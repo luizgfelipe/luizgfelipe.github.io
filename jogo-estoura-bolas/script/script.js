@@ -35,8 +35,6 @@ function addBola(){
 
     if(bolaQtd >= 10){
         fimDeJogo()
-    } else if(pontosQtd == 20){
-        fimDeJogo();
     }
 }
 
@@ -54,6 +52,10 @@ function estourar(elemento){
     
         pontosQtd = pontosQtd + 1
         document.querySelector(".information__points").innerHTML = "Pontos: "+pontosQtd;
+
+        if(pontosQtd == 20){
+            fimDeJogo();
+        }
     }
 }
 
@@ -147,10 +149,10 @@ function fimDeJogo(){
 
     pararJogo();
 
-    if(bolaQtd > 2){
+    if(bolaQtd >= 10){
         //Adiciona o fundo de game over
         document.querySelector(".display").classList.add("loser");
-    } else if(pontosQtd == 5){
+    } else if(pontosQtd == 20){
         //Adiciona o fundo de winner
         document.querySelector(".display").classList.add("winner");
     }
