@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+
+    <div class="structure">
+        <div data-box="a1" class="box b r"></div>
+        <div data-box="a2" class="box b r"></div>
+        <div data-box="a3" class="box b"></div>
+
+        <div data-box="b1" class="box b r"></div>
+        <div data-box="b2" class="box b r"></div>
+        <div data-box="b3" class="box b"></div>
+        
+        <div data-box="c1" class="box r"></div>
+        <div data-box="c2" class="box r"></div>
+        <div data-box="c3" class="box"></div>
+    </div>
+
+    <div class="info">
+        <div class="info-item">
+            <div class="info-title">Vez:</div>
+            <div class="info-player"></div>
+        </div>
+        <div class="info-item">
+            <div class="info-title"> Vencedor:</div>
+            <div class="info-winner"></div>
+        </div>
+    </div>
+
+        <button class="reset">Resetar</button>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
