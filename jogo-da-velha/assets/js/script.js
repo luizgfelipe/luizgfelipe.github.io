@@ -178,9 +178,9 @@ function block(){
             document.getElementById('b3').style.color = 'green';
             break;
         case 8:
-            document.getElementById('a1').style.color = 'green';
-            document.getElementById('a2').style.color = 'green';
-            document.getElementById('a3').style.color = 'green';
+            document.getElementById('c1').style.color = 'green';
+            document.getElementById('c2').style.color = 'green';
+            document.getElementById('c3').style.color = 'green';
             break;
         case 9:
             document.querySelectorAll('.box').forEach(box => {
