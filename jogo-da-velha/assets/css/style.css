@@ -28,7 +28,7 @@ h1{
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
-.structure:hover{
+.structureH:hover{
     cursor: pointer;
 }
 
@@ -90,6 +90,9 @@ h1{
 
 .info-player{
     text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 24px;
     color: rgb(26, 131, 180);
 }
 
@@ -110,4 +113,25 @@ h1{
 .reset:hover{
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+@media (max-width:426px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .structure{
+        width: 250px;
+        height: 250px;
+    }
+
+    .box{
+        width: 80px;
+        height: 80px;
+    }
 }

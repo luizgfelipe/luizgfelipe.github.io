@@ -95,6 +95,8 @@ function reset(){
 
     document.querySelector('.info-winner').innerHTML = "?";
 
+    document.querySelector('.structure').classList.add('structureH');
+
     player = '';
     winner = '';
     plays = 0;
@@ -116,4 +118,6 @@ function block(){
     document.querySelectorAll('.box').forEach(box => {
         box.removeAttribute('onclick', 'boxClick(this)');
     });
+
+    document.querySelector('.structure').classList.remove('structureH');
 }
