@@ -117,14 +117,6 @@ h1{
 
 @media (max-width:426px){
 
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
     .structure{
         width: 250px;
         height: 250px;
@@ -133,5 +125,13 @@ h1{
     .box{
         width: 80px;
         height: 80px;
+    }
+
+    .info{
+        width: 320px;
+    }
+    
+    .info-winner{
+        font-size: 18px;
     }
 }
