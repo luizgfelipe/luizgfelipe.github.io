@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav{
+    height: 30px;
+}
+
+.infoCoins{
+    width: 100%;
+}
+.infoCoins ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 16px;
+    height: 30px;
+}
+.infoCoins ul li{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.infoCoins ul li:hover{
+    border-bottom: 2px solid gray;
+}
+.infoCoins ul li a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.converter{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.converter__box{
+    display: flex;
+    align-items: center;
+}
+.converter__box__coin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin: 0 40px;
+}
+.converter__box__coin select{
+    height: 40px;
+    border-radius: 10px;
+}
+.converter__box__coin input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: 0px 5px;
+    line-height: 40px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.equal{
+    background-color: black;
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+}
+
+.mainCoins{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mainCoins__box{
+    margin: 10px 0;
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 87px 87px 87px 87px;
+    grid-template-rows: 100px 50px;
+    box-shadow: 2px 3px 5px rgb(0, 21, 78);
+    display: block;
+}
+.mainCoins__box__title{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 15px;
+    display: flex;
+}
+.mainCoins__box__content{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+.mainCoins__box__media{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainCoins__box__variation{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
