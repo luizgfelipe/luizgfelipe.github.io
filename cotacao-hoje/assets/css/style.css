@@ -1,3 +1,9 @@
+:root{
+    --bg-color: rgb(1, 6, 36);
+    --font-color: rgb(231, 231, 231);
+    --second-color: rgb(190, 171, 2);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,13 +12,15 @@
 
 body{
     background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    color:  var(--font-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
 }
 
 header{
@@ -38,18 +46,18 @@ nav{
 }
 .infoCoins ul li{
     height: 100%;
-    width: 100px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--bg-color);
 }
 .infoCoins ul li:hover{
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid var(--second-color);
 }
 .infoCoins ul li a{
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
     width: 100%;
     height: 100%;
     display: flex;
@@ -91,7 +99,7 @@ nav{
 }
 
 .equal{
-    background-color: black;
+    background-color: var(--font-color);
     width: 25px;
     height: 5px;
     margin: 5px;
@@ -109,36 +117,28 @@ nav{
     height: 150px;
     border-radius: 10px;
     border: 1px solid gray;
-    display: grid;
-    grid-template-columns: 87px 87px 87px 87px;
-    grid-template-rows: 100px 50px;
-    box-shadow: 2px 3px 5px rgb(0, 21, 78);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 3px 5px var(--second-color);
 }
 .mainCoins__box__title{
-    grid-column-start: 1;
-    grid-column-end: 2;
     padding: 15px;
     display: flex;
+    font-size: 14px;
 }
 .mainCoins__box__content{
-    grid-column-start: 2;
-    grid-column-end: 5;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 38px;
+    padding-top: 10px;
 }
 .mainCoins__box__media{
-    grid-column-start: 1;
-    grid-column-end: 3;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .mainCoins__box__variation{
-    grid-column-start: 3;
-    grid-column-end: 5;
     display: flex;
     align-items: center;
     justify-content: center;

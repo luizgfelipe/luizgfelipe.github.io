@@ -1,13 +1,10 @@
 window.addEventListener('load', async (event) => {
     var url = `https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,AUD-BRL,CHF-BRL,CAD-BRL,CNY-BRL,ARS-BRL,JPY-BRL`;
-    /* var url = `https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL`; */
 
     var result = await fetch(url);
     var json = await result.json();
 
     for (var prop in json) {
-        console.log(prop); // prop01
-        console.log(json[prop]); // Coluna 01
 
         var box = document.createElement('div');
         var boxTitle = document.createElement('div');
