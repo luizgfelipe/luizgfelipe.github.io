@@ -1,7 +1,8 @@
 :root{
-    --bg-color: rgb(1, 6, 36);
+    --bg-color: rgb(27, 27, 27);
+    --bg-color2: rgb(24, 24, 24);
     --font-color: rgb(231, 231, 231);
-    --second-color: rgb(190, 171, 2);
+    --second-color: rgb(251, 255, 0);
 }
 
 *{
@@ -28,6 +29,9 @@ header{
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+header h1{
+    border-bottom: 2px solid var(--second-color);
 }
 
 nav{
@@ -75,17 +79,21 @@ nav{
 .converter__box{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 900px;
+    max-width: 1200px;
 }
 .converter__box__coin{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 300px;
+    width: 400px;
     margin: 0 40px;
 }
 .converter__box__coin select{
     height: 40px;
+    width: 150px;
     border-radius: 10px;
 }
 .converter__box__coin input{
@@ -120,6 +128,10 @@ nav{
     display: flex;
     flex-direction: column;
     box-shadow: 2px 3px 5px var(--second-color);
+}
+.mainCoins__box:hover{
+    box-shadow: 1px 2px 10px var(--second-color);
+    background-color: var(--bg-color2);
 }
 .mainCoins__box__title{
     padding: 15px;

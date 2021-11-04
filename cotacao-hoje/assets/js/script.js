@@ -1,10 +1,24 @@
-window.addEventListener('load', async (event) => {
+window.addEventListener('load', request);
+
+document.querySelector('#coin1').addEventListener('change', handleInput);
+document.querySelector('#coin2').addEventListener('change', handleInput);
+document.querySelector('#list1').addEventListener('change', handleInput);
+document.querySelector('#list2').addEventListener('change', handleInput);
+
+var json = undefined;
+var BRL = 1;
+
+async function request() {
     var url = `https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,AUD-BRL,CHF-BRL,CAD-BRL,CNY-BRL,ARS-BRL,JPY-BRL`;
 
     var result = await fetch(url);
-    var json = await result.json();
+    json = await result.json();
 
-    for (var prop in json) {
+    createElement();
+}
+
+function createElement() {
+    for (let prop in json) {
 
         var box = document.createElement('div');
         var boxTitle = document.createElement('div');
@@ -18,22 +32,68 @@ window.addEventListener('load', async (event) => {
         box.appendChild(boxTitle);
         box.appendChild(boxContent);
 
-        if(json[prop].code != 'BTC'){
-            var price = json[prop].high;
-            price = price.toString();
-            price = price.slice(0, (price.indexOf('.'))+3);
-            price = 'R$ '+price.replace('.', ',');
-        } else{
-            price = 'R$ '+json[prop].high+'k';
+        if (json[prop].code != 'BTC') {
+            price = json[prop].high;
+            price = price.slice(0, (price.indexOf('.')) + 3);
+            price = 'R$ ' + price.replace('.', ',');
+        } else {
+            price = json[prop].high;
+            price = price.slice(0,5);
+            price = 'R$ ' + price + 'k';
         }
-            
+
         var name = json[prop].name;
         name = name.slice(0, (name.indexOf('/')));
 
-        boxTitle.innerHTML = '1 '+json[prop].code + ` (${name})`;
+        boxTitle.innerHTML = '1 ' + json[prop].code + ` (${name})`;
         boxContent.innerHTML = price;
     }
-});
 
+    let dolar = json.USDBRL.high;
+    dolar = dolar.slice(0, (dolar.indexOf('.')) + 3);
 
+    document.querySelector('#coin1').value = BRL;
+    document.querySelector('#coin2').value = BRL;
+}
 
+function handleInput() {
+
+    let moeda1 = BRL;
+    let moeda2 = undefined;
+
+    let select1 = document.querySelector('#list1');
+    let valorSelect1 = select1.options[select1.selectedIndex].value;
+
+    let select2 = document.querySelector('#list2');
+    let valorSelect2 = select2.options[select2.selectedIndex].value;
+
+    let valorInput1 = document.querySelector('#coin1').value;
+    let valorInput2 = document.querySelector('#coin2').value;
+
+    for (let prop in json) {
+        if (valorSelect2 === json[prop].code) {
+            moeda2 = json[prop].high;
+        }
+    }
+
+    cambio(valorInput1, valorInput2, moeda1, moeda2, valorSelect1, valorSelect2);
+
+}
+
+function cambio(input1, input2, moeda1, moeda2, select1, select2) {
+
+    let result = undefined;
+
+    if(select2 == 'BRL'){
+        document.querySelector('#coin2').value = input1;
+    } else if (select2 == 'BTC'){
+        result = (input1 / (moeda2 * 1000)).toFixed(8);
+        document.querySelector('#coin2').value = result;
+    } else{
+        result = input1 / moeda2;
+        result = result.toFixed(2);
+        document.querySelector('#coin2').value = result;
+    }
+    
+
+}
