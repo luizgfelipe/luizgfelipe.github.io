@@ -125,17 +125,22 @@ nav{
     margin: 5px;
 }
 
+.thumb img{
+    width: 100px;
+    margin-top: 35px;
+}
+
 .mainCoins{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 45px;
+    margin-top: 35px;
 }
 .mainCoins__box{
     margin: 10px 0;
-    width: 350px;
-    height: 150px;
+    width: 600px;
+    height: 200px;
     border-radius: 10px;
     border: 1px solid gray;
     display: flex;
@@ -149,12 +154,13 @@ nav{
 .mainCoins__box__title{
     padding: 15px;
     display: flex;
-    font-size: 14px;
+    font-size: 28px;
 }
 .mainCoins__box__content{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 38px;
+    font-size: 64px;
     padding-top: 10px;
 }
+

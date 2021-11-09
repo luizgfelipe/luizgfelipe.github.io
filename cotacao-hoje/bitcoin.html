@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moeda Hoje</title>
+    <link rel="stylesheet" href="assets/css/coin.css">
+</head>
+<body>
+    <header class="title">
+        <a href="index.html"><h1>Moeda Hoje</h1></a>
+    </header>
+
+    <nav class="infoCoins">
+        <ul>
+            <li><a href="dolar.html">Dólar</a></li>
+            <li><a href="euro.html">Euro</a></li>
+            <li><a href="libra.html">Libra</a></li>
+            <li><a href="peso.html">Peso Argentino</a></li>
+            <li><a href="franco.html">Franco Suiço</a></li>
+            <li><a href="bitcoin.html">Bitcoin</a></li>
+        </ul>
+    </nav>
+
+    <section class="converter">
+        <div class="converter__box">
+            <div class="converter__box__coin">
+                <select id="list1">
+                    <option value="USD" selected>Bitcoin</option>
+                </select>
+                <input id="coin1" type="number" min="0"> 
+            </div>
+
+            <div class="converter__box__equal">
+                <div class="equal"></div>
+                <div class="equal"></div>
+            </div>
+            
+            <div class="converter__box__coin">
+                <select id="list2">
+                    <option value="BRL">Real</option>
+                </select>
+                <input id="coin2" type="number" min="0"> 
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="thumb"><img src="assets/images/btc2.png"></div>
+
+    <section class="mainCoins"></section>
+
+    <section class="graphic">
+        <canvas id="graphic__dolar"></canvas>
+    </section>
+
+
+
+    
+
+    <script src="assets/js/bitcoin.js"></script>
+</body>
+</html>
