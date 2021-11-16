@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.area{
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+    padding: 15px;
+    background-color: white;
+}
+
+.remember{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #EEE;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gray{
+    color: #999;
+    padding: 20px;
+}
+
+.form-check-label{
+    margin-left: 10px;
+}
+
+.recovery{
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    color: #EEE;
+}
+.recovery:hover{
+    color: #999;
+}
