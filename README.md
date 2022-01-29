@@ -10,6 +10,7 @@
 - https://luizgfelipe.github.io/cotacao-hoje/
 - https://luizgfelipe.github.io/formulario-login-bootstrap/
 - https://luizgfelipe.github.io/barbearia/
+- https://luizgfelipe.github.io/button-loading/
 
 ---
 No momento o foco é HTML E CSS e JS. 
