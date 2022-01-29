@@ -147,7 +147,8 @@ function limpar(){
 
 function fimDeJogo(){
 
-    pararJogo();
+    /* pararJogo(); */
+    clearInterval(startStop);
 
     if(bolaQtd >= 10){
         //Adiciona o fundo de game over

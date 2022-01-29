@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #999;
+}
+
+.box{
+    background-color: rgb(231, 231, 231);
+    width: 400px;
+    height: 800px;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    transition: 0.9s;
+    width: 300px;
+    height: 40px;
+    color: white;
+    border: 0;
+    background-color: #098AEF;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.p{
+    opacity: 1;
+    transition: .2s linear;
+}
+
+.loading{
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+    background-image: url(assets/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.2s linear;
+}
+
+.check{
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+    background-image: url(assets/tick.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.2s linear;
+}
+
+.hide{
+    opacity: 0;
+    pointer-events: none;
+}
