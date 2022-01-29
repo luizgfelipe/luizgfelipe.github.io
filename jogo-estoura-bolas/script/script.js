@@ -147,10 +147,7 @@ function limpar(){
 
 function fimDeJogo(){
 
-<<<<<<< HEAD
     /* pararJogo(); */
-=======
->>>>>>> 4eeeabec512b130fc71e41a7f45ab4844471bbe4
     clearInterval(startStop);
 
     if(bolaQtd >= 10){
