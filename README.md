@@ -11,6 +11,7 @@
 - https://luizgfelipe.github.io/formulario-login-bootstrap/
 - https://luizgfelipe.github.io/barbearia/
 - https://luizgfelipe.github.io/button-loading/
+- https://luizgfelipe.github.io/api-fake/
 
 ---
 No momento o foco é HTML E CSS e JS. 
