@@ -27,7 +27,6 @@ body {
 }
 
 .body-app {
-    
     max-width: 1350px;
     background-color: var(--backgorund);
     display: flex;
@@ -378,6 +377,9 @@ button:first-child {
 }
 
 @media (max-width: 425px) {
+    .body-app {
+        height: max-content;
+    }
       
     .results__simulator {
         height: auto;
@@ -386,9 +388,21 @@ button:first-child {
     .chart__subtitle {
         font-size: 12px;
     }
+
+    .canva__area{
+        width: 360px;
+    }
+
+    .canva {
+        width: 360px;
+    }
 }
 
 @media (max-width: 375px) {
+    .body-app {
+        height: max-content;
+    }
+    
     .results__row__item {
         width: 130px;
     }
