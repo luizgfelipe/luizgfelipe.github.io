@@ -15,5 +15,6 @@
 
 ---
 No momento o foco é HTML E CSS e JS.
-Estudando React
+---
+Estudando React...
 ---
